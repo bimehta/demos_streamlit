@@ -13,12 +13,12 @@ from langchain_openai import ChatOpenAI
 #Streamlit App Essentials
 st.set_page_config(page_title="Sooch RAG Agent", page_icon="🤖")
 st.image('SoochLogo.png', use_container_width=False) 
-st.title("Sooch Document AI Q&A")
+st.title("Sooch Document AI")
 
 
 # Pinecone and OpenAI API keys
 pc = Pinecone(api_key="pcsk_2gtr65_Dm42ejX9QrrmBupkbKMP8PkbLm2fXCqiKKf8XPzW3gvZk6m86KEKPSGy4Lvzs9b")
-st.title("Document Search with OpenAI API Key Input")
+st.write("Sooch AI Agent needs your API Key to get started")
 
 # Input OpenAI API Key
 openai_api_key = st.text_input(
