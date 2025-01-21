@@ -10,6 +10,12 @@ from PyPDF2 import PdfReader
 import docx
 from langchain_openai import ChatOpenAI
 
+#Streamlit App Essentials
+st.set_page_config(page_title="Sooch RAG Agent", page_icon="🤖")
+st.image('SoochLogo.png', use_container_width=False) 
+st.title("Sooch Document AI Q&A")
+
+
 # Pinecone and OpenAI API keys
 pc = Pinecone(api_key="pcsk_2gtr65_Dm42ejX9QrrmBupkbKMP8PkbLm2fXCqiKKf8XPzW3gvZk6m86KEKPSGy4Lvzs9b")
 st.title("Document Search with OpenAI API Key Input")
@@ -44,9 +50,6 @@ if not openai_api_key:
 # vector_store = PineconeVectorStore(index=index, embedding=embeddings)
 
 # Streamlit app
-st.set_page_config(page_title="Sooch RAG Agent", page_icon="🤖")
-st.image('SoochLogo.png', use_container_width=False) 
-st.title("Sooch Document AI Q&A")
 
 
 # Function to extract text from different file types
