@@ -12,7 +12,18 @@ from langchain_openai import ChatOpenAI
 
 # Pinecone and OpenAI API keys
 pc = Pinecone(api_key="pcsk_2gtr65_Dm42ejX9QrrmBupkbKMP8PkbLm2fXCqiKKf8XPzW3gvZk6m86KEKPSGy4Lvzs9b")
-openai_api_key = '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'
+st.title("Document Search with OpenAI API Key Input")
+
+# Input OpenAI API Key
+openai_api_key = st.text_input(
+    "Enter your OpenAI API Key:",
+    type="password",
+    help="Your OpenAI API key is required to generate summaries and perform searches."
+)
+
+if not openai_api_key:
+    st.warning("Please enter your OpenAI API key to proceed.")
+    st.stop()
 
 # index_name = "sooch-demo-index-deployed"
 
