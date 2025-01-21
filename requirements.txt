@@ -1,0 +1,10 @@
+streamlit
+time
+uuid
+langchain_openai
+langchain_pinecone
+langchain_core
+langchain
+pinecone
+PyPDF2
+docx
